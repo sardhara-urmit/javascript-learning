@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1 class="h">hello events</h1></header>
+    <nav></nav>
+    <section>
+        <!--thi is not better way -->
+        <button onclick="console.log('hello im in line')" id="btn1">click me</button>  
+        <button id="btn2">db click</button>  
+        <button id="btn3">mouse hover</button>
+        <button ondblclick="console.log('2 time click');alert('2x click')">2x click</button>
+        <div onmouseover="console.log('mouse on the box ')" class="box"></div>
+    </section>
+
+    <section>
+        <button id="s2btn1"></button>
+
+        <button id="mode">change mode</button>
+    </section>
+    <script src="javS.js"></script>
+</body>
+</html>
