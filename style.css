@@ -31,25 +31,34 @@ body{
 .child{
     width: 120px;
     aspect-ratio: 1;
-    background-color: red;
+    background-color: rgb(249, 249, 249);
     border-radius: 50%;
     border: 2px solid black;
     transition: all 2s;
+    box-shadow: inset 0px 0px 30px 10px rgb(28, 28, 27);
 }
 .ch1:hover{
     transition-timing-function: linear;
-   translate: 80vw 0;
+   translate: 90vw 0;
    background-color: black;
+   border: 1px solid red;
+   box-shadow: inset 0px 0px 30px 10px red;
     
 }
 .ch2:hover{
     transition-timing-function: ease-in-out;
     translate: 90vw;
+     background-color: black;
+   border: 1px solid red;
+   box-shadow: inset 0px 0px 30px 10px red;
 }
 
 .ch3:hover{
     transition-timing-function: ease-out;
     translate: 90vw;
+     background-color: black;
+   border: 1px solid red;
+   box-shadow: inset 0px 0px 30px 10px red;
 }
 /* .item{
 
