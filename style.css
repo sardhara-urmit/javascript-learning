@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body{
-    background:linear-gradient(to right,rgb(221, 105, 105),rgb(137, 137, 211));
+    background:linear-gradient(to right,rgb(0, 0, 0),rgb(236, 224, 0));
 }
 .h1{
      background:linear-gradient(to right,rgb(96, 92, 92),black); 
