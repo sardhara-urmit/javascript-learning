@@ -53,20 +53,36 @@
 // })
 
 
-// call data step by step by useing nested call
-function database(data,nextdata){
+// call data step by step by useing nested call  
+
+// function database(data,nextdata){
     
-    setTimeout(() => {
-        console.log("the data is ",data);
-        if(nextdata){
-            nextdata();
-        }
+//     setTimeout(() => {
+//         console.log("the data is ",data);
+//         if(nextdata){
+//             nextdata();
+//         }
 
-    }, 2000);
-}
+//     }, 2000);
+// }
 
-database(1,()=>{
-    database(2,()=>{
-    database(3)
+// // this i the call back hell
+// database(1,()=>{
+//     database(2,()=>{
+//     database(3)
+// })
+// });
+
+
+
+
+// promies for solve call back hell --------------------------
+
+
+let prms =new Promise((resolve ,rejet)=>{
+    console.log("hello promies");
+    // resolve("all is done "); 
+    rejet("this is rejected ");
+
+
 })
-});
