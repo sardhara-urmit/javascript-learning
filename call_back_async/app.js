@@ -79,10 +79,20 @@
 // promies for solve call back hell --------------------------
 
 
-let prms =new Promise((resolve ,rejet)=>{
-    console.log("hello promies");
-    // resolve("all is done "); 
-    rejet("this is rejected ");
+// let prms =new Promise((resolve ,rejet)=>{
+//     console.log("hello promies");
+//     // resolve("all is done "); 
+//     rejet("this is rejected ");
 
 
-})
+// })
+
+
+function getdata(data,nextdata){
+    let prms =new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            console.log("thi is the data",data);
+        }, 5000);
+    })
+
+}
