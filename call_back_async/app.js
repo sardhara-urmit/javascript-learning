@@ -1,5 +1,4 @@
-// async--------------------------
-
+// async------------------------------------------------
 
 
 
@@ -32,7 +31,7 @@
 
 
 
-// //callback --------------
+// //callback -------------------------------------------------------------------
  
  
  
@@ -76,7 +75,7 @@
 
 
 
-// // promies for solve call back hell --------------------------
+// // promies for solve call back hell -------------------------------------
 
 
 // let prms =new Promise((resolve ,rejet)=>{
@@ -106,7 +105,7 @@
 
 
 
-// //promis.then and catch--------------------
+// //promis.then and catch--------------------------------------------------
 
 
 
@@ -129,24 +128,73 @@
 // })
 
 
-// // use promies is real time with dom
+
+// function getdata(data){
+//     return new  Promise((resolve,reject)=>{
+//         setTimeout(() => {
+//             console.log("data is ",data)
+//             resolve("succes");
+//         }, 2000);
+//     })
+// }
+
+// getdata(1).then((res)=>{
+// return getdata(2);
+// }).then((res)=>{
+//     return getdata(3);
+    
+// }).then((res)=>{
+//     console.log(res);
+// })
 
 
-let h1 =document.querySelector("#h1");
 
 
 
-function getdata(data){
-    return new Promise((resolve,reject)=>{
+
+// async  await   ------------------------------------------------------
+ function getdata(data){
+     return new Promise((resolve,reject)=>{
+
         setTimeout(() => {
-             h1.innerText=(`data is ${data}`);
-        
-        resolve("this is done ");
+            console.log("data is",data);
+           resolve("succses");
         }, 2000);
-    })
-}
 
-let prms =getdata(1);
-prms.then(()=>{
-    console.log("done");
-});
+     })
+} 
+
+async function runer(res) {
+    console.log("data is comming ");
+    await getdata(1);
+    console.log("data is comming ");
+    await getdata(2);
+    console.log("data is comming ");
+    await getdata(3);
+}
+let p = runer();
+
+
+
+
+// // use promies is real time with dom-------------------------------------
+
+
+// let h1 =document.querySelector("#h1");
+
+
+
+// function getdata(data){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(() => {
+//              h1.innerText=(`data is ${data}`);
+        
+//         resolve("this is done ");
+//         }, 2000);
+//     })
+// }
+
+// let prms =getdata(1);
+// prms.then(()=>{
+//     console.log("done");
+// });
