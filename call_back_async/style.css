@@ -16,3 +16,11 @@ header{
 body{
     background-color: powderblue;
 }
+.test{
+    background:linear-gradient(to right ,red ,blue);
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+}

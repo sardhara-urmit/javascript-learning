@@ -32,7 +32,7 @@
 
 
 
-// callback --------------
+// //callback --------------
  
  
  
@@ -53,7 +53,7 @@
 // })
 
 
-// call data step by step by useing nested call  
+//  // call data step by step by useing nested call  
 
 // function database(data,nextdata){
     
@@ -76,7 +76,7 @@
 
 
 
-// promies for solve call back hell --------------------------
+// // promies for solve call back hell --------------------------
 
 
 // let prms =new Promise((resolve ,rejet)=>{
@@ -88,11 +88,65 @@
 // })
 
 
-function getdata(data,nextdata){
-    let prms =new Promise((resolve,reject)=>{
-        setTimeout(() => {
-            console.log("thi is the data",data);
-        }, 5000);
-    })
+// function getdata(data,nextdata){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(() => {
+//             console.log("thi is the data",data);
+//             resolve("done ");
+//             if(nextdata){
+//                 nextdata();
+//             }
+//         }, 5000);
+        
+//     })
 
+// }
+
+
+
+
+
+// //promis.then and catch--------------------
+
+
+
+// function test(){
+//     return new Promise((resolve,reject)=>{
+//         console.log("run prms");
+//         // resolve("succes");  
+//         reject("this is fail");
+
+//     });
+// };
+
+// let promis = test();
+// promis.then((res)=>{
+//         console.log("promies is done ",res);
+// });
+
+// promis.catch((d)=>{
+//     console.log("not succes ",d);
+// })
+
+
+// // use promies is real time with dom
+
+
+let h1 =document.querySelector("#h1");
+
+
+
+function getdata(data){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+             h1.innerText=(`data is ${data}`);
+        
+        resolve("this is done ");
+        }, 2000);
+    })
 }
+
+let prms =getdata(1);
+prms.then(()=>{
+    console.log("done");
+});
