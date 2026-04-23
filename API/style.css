@@ -4,3 +4,14 @@
     text-align: center;
     margin: auto;
 }
+.catmg{
+    display: block;
+    width: 200px;
+    height: 300px;
+ margin: auto;
+}
+.button{
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+}

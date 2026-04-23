@@ -30,9 +30,20 @@ const getdata = async ()=>{
 let data =await prms.blob();               // this is for img        .blob()
    console.log(data);
 
+   let img =document.querySelector("#img");
+    let imgtag=URL.createObjectURL(data);
+     img.src=imgtag;
 }
 
-let p=getdata();
+
+let button =document.querySelector("#button");
+button.addEventListener("click",()=>{
+    console.log("click");
+    getdata(); 
+})
+        getdata();
+
+
 
 
 //// tis is used to call function step dy step ------------------
