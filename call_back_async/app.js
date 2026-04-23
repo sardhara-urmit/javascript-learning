@@ -172,8 +172,22 @@ async function runer(res) {
     console.log("data is comming ");
     await getdata(3);
 }
-let p = runer();
+// let p = runer();             // this is need ti call this function 
 
+
+
+// this method is not need to call this function  this is the
+//  iife method 
+
+
+(async function (res) {
+    console.log("data is comming ");
+    await getdata(1);
+    console.log("data is comming ");
+    await getdata(2);
+    console.log("data is comming ");
+    await getdata(3);
+})();
 
 
 
