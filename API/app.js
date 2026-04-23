@@ -36,11 +36,11 @@ let data =await prms.blob();               // this is for img        .blob()
 }
 
 
-let button =document.querySelector("#button");
-button.addEventListener("click",()=>{
-    console.log("click");
-    getdata(); 
-})
+// let button =document.querySelector("#button");
+// button.addEventListener("click",()=>{
+//     console.log("click");
+//     getdata(); 
+// })
         getdata();
 
 
