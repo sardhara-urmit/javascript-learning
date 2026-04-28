@@ -1,6 +1,6 @@
-import names from "./script.js";     //defoult import
+import name from "./script.js";     // tihs is the normal defoult
 import {age} from "./script.js";    // this is te named import
 
 // console.log("urmit ");
-console.log(names);
+console.log(name);
 console.log(age);    
